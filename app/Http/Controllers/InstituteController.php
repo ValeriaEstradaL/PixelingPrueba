@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Insitute;
+use Illuminate\Support\Facades\Validator;
 
 class InstituteController extends Controller
 {

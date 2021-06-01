@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Institute extends Model
 {
     use HasFactory;
+    protected $fillable=['name','phone','email'];
+    public function pet(){
+        return $this->hasMany('App\Pet');
+
+    }
 }
