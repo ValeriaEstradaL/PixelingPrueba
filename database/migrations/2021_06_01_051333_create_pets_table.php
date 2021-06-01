@@ -17,7 +17,7 @@ class CreatePetsTable extends Migration
             $table->id();
             $table->string("name");
             $table->enum('species',['dog','cat']);
-            $table->string("breed_cat_id")_>nulllable();
+            $table->string("breed_cat_id")->nulllable();
             $table->string("breed_dog_id")->nullable;
             $table->date('birth')->date_format('MM/YYYY');
             $table->string('image');
