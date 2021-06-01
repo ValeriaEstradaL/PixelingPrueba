@@ -1,8 +1,9 @@
-#Prueba pixeling BackendJunior 
+# Prueba pixeling BackendJunior 
 
 Esta es una prueba realizada para pixeling la cual trata de una api para adopción de mascotas 
 
-#Endpoints 
+# Endpoints 
+php artisan migrate --seed para cargar los seeders.
 php artisan serve para habilitar servidor 
 
 # Institute 
