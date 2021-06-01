@@ -5,7 +5,7 @@ Esta es una prueba realizada para pixeling la cual trata de una api para adopciÃ
 #Endpoints 
 php artisan serve para habilitar servidor 
 
-#Institute 
+# Institute 
 -Index, post 
     Ruta: api/institute
     Campos requeridos para POST: name, email, phone (formato Json)
@@ -14,7 +14,7 @@ php artisan serve para habilitar servidor
     Ruta: api/institute/id
     Campos requeridos para el Edit/Update name, email, phone (formato Json)
 
-#Pet
+# Pet
 -Index,Post
     Ruta: api/pet
     Campos requeridos para POST: name, species(se debe elegir entre dog o cat), 
@@ -23,6 +23,7 @@ php artisan serve para habilitar servidor
     image (foto correspondiente)
     institute_id (instituciÃ³n a la que pertenece)
 
-#Relaciones 
+# Relaciones 
  uno a muchos pet-> institute
 
+# Clonar desde la rama Valeria
