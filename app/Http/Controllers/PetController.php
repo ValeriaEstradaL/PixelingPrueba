@@ -29,8 +29,9 @@ class PetController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|min5|max:120',
             'species' => 'in:dog,cat',
-            'birth'=> 'required|date_format:m/Y',
+            'birth'=> 'required|date_format:mm-yyyy',
             'image'=> 'mimes:jpg,bmp,png|max:1000',
+            'breed'=>'required|number',
             'institute_id' => 'required'
 
         ]);
@@ -39,6 +40,7 @@ class PetController extends Controller
         $pet->name= $request->name;
         $pet->species= $request->species;
         $pet->birth= $request->birth;
+        $pet->breed= $request->breed;
         $pet->image= $request->file('image');
         $pet->institute_id= $request->institute_id;
         $pet->birth= $request->birth;
@@ -49,7 +51,7 @@ class PetController extends Controller
 
         }
 
-       $res= $institute->save();
+       $res= $pet->save();
        if ($res) {
         return response()->json(['message' => 'Pet create succesfully'], 201);
     }
