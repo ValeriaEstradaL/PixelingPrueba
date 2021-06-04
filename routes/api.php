@@ -4,7 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstituteController;
 use App\Http\Controllers\PetController;
-
+use App\Http\Controllers\DogBreedController;
+use App\Http\Controllers\CatBreedController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,5 +20,7 @@ use App\Http\Controllers\PetController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('dogbreed', [DogBreedController::class,'index']);
+Route::get('catbreed', [CatBreedController::class,'index']);
 Route::apiResource('institute', InstituteController::class);
 Route::apiResource('pet', PetController::class);

@@ -15,7 +15,7 @@ class PetController extends Controller
      */
     public function index()
     {
-        //
+        return Pet::all();
     }
 
     /**
@@ -32,7 +32,7 @@ class PetController extends Controller
             'birth'=> 'required|date_format:mm-yyyy',
             'image'=> 'mimes:jpg,bmp,png|max:1000',
             'breed'=>'required|number',
-            'institute_id' => 'required'
+            'institute' => 'required'
 
         ]);
         $pet= new Pet;
